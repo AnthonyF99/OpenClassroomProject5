@@ -4,16 +4,16 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About/about.jsx'
 import Header from './components/Header'
-import Banner from './components/Banner'
+import Error from './components/Error'
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Header />
-      <Banner />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </Router>
   </React.StrictMode>,
