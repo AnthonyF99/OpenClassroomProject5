@@ -1,0 +1,12 @@
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+    padding: 66px 0px;
+    h4 {
+        color: white;
+        text-align: center;
+    }
+}

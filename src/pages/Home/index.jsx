@@ -1,11 +1,14 @@
-import MainHome from '../../components/Main_Home';
-import Banner from '../../components/Banner'
+import Cards from "../../components/Cards";
+import Banner from "../../components/Banner";
+import "../../styles/main.scss";
+
+import homeImage from "../../assets/Banner.png";
 
 function Home() {
   return (
     <div className="App">
-      <Banner />
-      <MainHome />
+      <Banner imageUrl={homeImage} isHomePage={true} />
+      <Cards />
     </div>
   );
 }

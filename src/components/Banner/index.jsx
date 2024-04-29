@@ -1,13 +1,20 @@
-import '../../styles/banner.scss'
-import '../../styles/main.scss'
+// Banner.jsx
 
+import React from "react";
+import PropTypes from "prop-types";
+import "../../styles/banner.scss";
 
-function Banner() {
-    return (
-        <div className="banner">
-            <h1>Chez vous, partout et ailleurs</h1>
-        </div>
-    )
+function Banner({ imageUrl, isHomePage }) {
+  return (
+    <div className="banner" style={{ backgroundImage: `url(${imageUrl})` }}>
+      {isHomePage && <h1>Chez vous, partout et ailleurs</h1>}
+    </div>
+  );
 }
 
-export default Banner
+Banner.propTypes = {
+  imageUrl: PropTypes.string.isRequired,
+  isHomePage: PropTypes.bool.isRequired,
+};
+
+export default Banner;

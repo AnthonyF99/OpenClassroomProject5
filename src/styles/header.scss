@@ -1,28 +1,24 @@
-// header.scss
-
 header {
+  width: 100%;
+  display: flex;
+  align-items: center; // Pour aligner verticalement les éléments
+  justify-content: space-between;
+  margin-top: 45px;
+  margin-bottom: 50px;
+
+  .Kasa-logo {
+    width: 210px;
+    height: 68px; // Ajustez la largeur du logo selon vos besoins
+  }
+
+  .navlink {
     display: flex;
     align-items: center; // Pour aligner verticalement les éléments
-    justify-content: space-between;
-    padding: 10px; // Ajoutez un padding pour l'espace autour des éléments
-    margin-top: 45px;
-    margin-bottom: 50px;
-    width: 100%;
-  
-    .Kasa-logo {
-      width: 210px;
-      height: 68px; // Ajustez la largeur du logo selon vos besoins
-    }
-  
-    .navlink {
-      display: flex;
-      align-items: center; // Pour aligner verticalement les éléments
-  
-      a {
-        text-decoration: none;
-        color: black; // Couleur du texte des liens, modifiez selon vos besoins
-        margin-right: 20px; // Ajoutez un espacement entre les liens
-      }
+
+    a {
+      text-decoration: none;
+      color: black; // Couleur du texte des liens, modifiez selon vos besoins
+      margin-right: 20px; // Ajoutez un espacement entre les liens
     }
   }
-  
+}
