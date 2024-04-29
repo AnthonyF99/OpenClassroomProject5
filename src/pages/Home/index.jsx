@@ -1,5 +1,5 @@
-import Cards from "../../components/Cards";
-import Banner from "../../components/Banner";
+import Cards from "../../components/Cards/cards";
+import Banner from "../../components/Banner/banner";
 import "../../styles/main.scss";
 
 import homeImage from "../../assets/Banner.png";

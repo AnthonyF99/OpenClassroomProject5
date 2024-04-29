@@ -3,17 +3,15 @@
     padding: 50px;
     border-radius: 25px;
     margin-top: 43px;
+    margin-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; // Pour répartir uniformément les cartes sur la ligne
   }
   
   .card {
-    position: relative;
     border-radius: 10px;
-    height: 80%;
     background-color: #FF6060;
-    padding: 20px; // Ajuster le rembourrage selon vos besoins
     margin-bottom: 20px; // Espacement entre les cartes
     color: white;
   }
@@ -26,16 +24,19 @@
   
   .card-img img {
     width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     height: 340px;
     object-fit: cover;
   }
 
   .card-title {
-    padding-bottom: 5px;
+    padding: 10px;
   }
   
   a {
     width: 30%;
+    height: 80%;
     display: block;
     text-decoration: none;
   }

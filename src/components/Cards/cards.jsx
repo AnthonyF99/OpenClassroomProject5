@@ -1,3 +1,5 @@
+import React from "react";
+import { Link } from "react-router-dom"; // Importez Link depuis react-router-dom
 import LogementsData from "../../datas/logement.json";
 import "../../styles/card.scss";
 
@@ -12,10 +14,11 @@ function Logements() {
   return (
     <div className="card-container">
       {LogementsData.map((logement) => (
-        <a
-          href={`#/logement/${logement.id}`}
+        <Link
+          to={`/logement/${logement.id}`} // Utilisez to pour spécifier l'URL de destination
           key={logement.id}
           onClick={() => handleCardClick(logement.id)}
+          className="card-link" // Ajoutez une classe pour le style
         >
           <div className="card">
             <div className="card-content">
@@ -23,11 +26,11 @@ function Logements() {
                 <img src={logement.cover} alt={logement.title}></img>
               </div>
               <div className="card-title">
-                <h3>{logement.title}</h3>
+                <h4>{logement.title}</h4>
               </div>
             </div>
           </div>
-        </a>
+        </Link>
       ))}
     </div>
   );

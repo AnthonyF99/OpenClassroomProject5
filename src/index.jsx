@@ -3,9 +3,9 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About/about.jsx";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Error from "./components/Error";
+import Header from "./components/Header/header.jsx";
+import Footer from "./components/Footer/footer.jsx";
+import Error from "./components/Error/error.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
