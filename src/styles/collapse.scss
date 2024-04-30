@@ -1,0 +1,48 @@
+.collapse-menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.menu-content {
+    width: 80%;
+    display: none;
+    background-color: #fff;
+}
+
+.menu-content.open {
+    display: block;
+}
+
+.collapse-btn {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FF6060;
+    width: 80%;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+}
+
+.collapse-btn:focus {
+    outline: none;
+}
+
+.collapse-menu {
+    .collapse-btn {
+      .arrow {
+        transition: transform 0.25s ease; // Ajout de la transition de l'animation
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+    }
+  
+    .arrow.open {
+      transform: rotate(-180deg); // Rotation de 90 degrés lorsque le collapse est ouvert
+    }
+  }
+  
