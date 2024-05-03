@@ -10,8 +10,8 @@ function Collapse({ title, content }) {
   };
 
   return (
-    <div className="collapse-menu">
-      <button className="collapse-btn">
+    <div className="collapse-container">
+      <div className="collapse">
         <div className="title">{title}</div>
         <button
           className={`arrow ${isOpen ? "open" : ""}`}
@@ -19,7 +19,7 @@ function Collapse({ title, content }) {
         >
           <img src={arrow} alt="arrow" />
         </button>
-      </button>
+      </div>
       <div className={`menu-content ${isOpen ? "open" : ""}`}>{content}</div>
     </div>
   );

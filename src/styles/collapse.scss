@@ -1,4 +1,4 @@
-.collapse-menu {
+.collapse-container {
     position: relative;
     display: flex;
     justify-content: center;
@@ -18,22 +18,24 @@
     display: block;
 }
 
-.collapse-btn {
+.collapse {
     display: flex;
     justify-content: space-between;
     background-color: #FF6060;
+    border-radius: 5px;
+    align-items: center;
     width: 80%;
     color: #fff;
     border: none;
     padding: 10px 20px;
 }
 
-.collapse-btn:focus {
+.collapse:focus {
     outline: none;
 }
 
-.collapse-menu {
-    .collapse-btn {
+.collapse-container {
+    .collapse {
       .arrow {
         transition: transform 0.25s ease; // Ajout de la transition de l'animation
         border: none;
