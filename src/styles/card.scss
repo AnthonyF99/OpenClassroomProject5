@@ -44,6 +44,8 @@
   @media  screen and (max-width:650px){
   .card-container {
     flex-direction: column;
+    background-color: transparent;
+    margin-bottom: 27px;
     a {
       width: 100%;
     }
