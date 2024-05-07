@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { Navigate, useParams } from "react-router-dom";
 import Collapse from "../Collapse/collapse.jsx";
 import LogementsData from "../../datas/logement.json";
@@ -10,20 +10,64 @@ function LogementsDetails() {
     (logement) => logement.id === logementId
   );
 
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   if (!thisLogement) {
     // Rediriger vers la page Error si le logement n'est pas trouvé
     return <Navigate to="/error" replace />;
   }
 
+  const nextSlide = () => {
+    setCurrentSlide((prevSlide) =>
+      prevSlide === thisLogement.pictures.length - 1 ? 0 : prevSlide + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prevSlide) =>
+      prevSlide === 0 ? thisLogement.pictures.length - 1 : prevSlide - 1
+    );
+  };
+
   return (
     <div className="logements-details-informations">
-      <div className="slider"></div>
-      <div className="information">
-        <h1>{thisLogement.title}</h1>
-        <h2>{thisLogement.host.name}</h2>
-        <p>{thisLogement.location}</p>
+      <div className="slider">
+        <div className="slides-container">
+          {thisLogement.pictures.map((picture, index) => (
+            <div
+              key={index}
+              className={`slide ${index === currentSlide ? "active" : ""}`}
+            >
+              {index === currentSlide && (
+                <img src={picture} alt={`Image ${index}`} />
+              )}
+            </div>
+          ))}
+        </div>
+        <button className="prev" onClick={prevSlide}>
+          &#10094;
+        </button>
+        <button className="next" onClick={nextSlide}>
+          &#10095;
+        </button>
       </div>
-      <div className="description">
+      <div className="information">
+        <div className="host-logement">
+          <h1>{thisLogement.title}</h1>
+          <h2>{thisLogement.host.name}</h2>
+        </div>
+        <div id="location">
+          <p>{thisLogement.location}</p>
+        </div>
+        <div className="tags">
+          <ul>
+            {thisLogement.tags.map((tag, index) => (
+              <li key={index}>{tag}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <div className="collapse-logement">
         <Collapse title="Description" content={thisLogement.description} />
         <Collapse
           title="Equipements"

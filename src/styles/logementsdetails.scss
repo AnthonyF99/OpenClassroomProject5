@@ -1,0 +1,93 @@
+.slider {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 415px;
+    overflow: hidden;
+    border-radius: 25px;
+    .slides-container {
+        display: flex;
+        width: 100%;
+        transition: transform 0.5s ease; /* Animation de transition pour le défilement */
+        .slide.active {
+            width: 100%;
+        }
+        .slide img {
+            width: 100%;
+          }
+      }
+  }  
+
+ 
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+
+
+  .information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .host-logement {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: #FF6060;
+
+    }
+    #location {
+        display: flex;
+    }
+    .tags {
+        ul {
+            display: flex;
+            padding: 0;
+            color: white;
+            list-style-type: none;
+            gap: 20px;
+            li {
+                background-color: #FF6060;
+                border-radius: 10px;
+                padding: 10px;
+            }    
+        }
+    }
+  }
+
+  .collapse-logement {
+    display: flex;
+    flex-direction: row; /* Afficher les collapses en ligne */
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .collapse-logement .collapse-container {
+    display: flex;
+    width: 100%;
+  }
+
+  .collapse-logement .collapse-container .menu-content.open {
+    max-width: 100%;
+  }
+  
+  
+  
