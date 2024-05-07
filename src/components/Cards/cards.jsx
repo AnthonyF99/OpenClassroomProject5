@@ -15,8 +15,8 @@ function Logements() {
     <div className="card-container">
       {LogementsData.map((logement) => (
         <Link
-          to={`/logement/${logement.id}`} // Utilisez to pour spécifier l'URL de destination
           key={logement.id}
+          to={`/logement/${logement.id}`} // Utilisez to pour spécifier l'URL de destination
           onClick={() => handleCardClick(logement.id)}
           className="card-link" // Ajoutez une classe pour le style
         >
