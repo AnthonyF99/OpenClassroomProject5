@@ -62,6 +62,7 @@ function LogementsDetails() {
           <div className="host-logement">
             <h1>{thisLogement.title}</h1>
             <h2>{thisLogement.host.name}</h2>
+            <div className="host-icon"></div>
           </div>
           <div id="location">
             <p>{thisLogement.location}</p>
@@ -74,6 +75,7 @@ function LogementsDetails() {
             </ul>
             <div className="rating">
               <Star rating={getRatingValue()} />
+              <span class="host-name-mobile">{thisLogement.host.name}</span>
             </div>
           </div>
         </div>
