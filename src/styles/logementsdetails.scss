@@ -17,21 +17,23 @@
             width: 100%;
             border-radius: 25px;
             height: 415px;
+            object-fit: cover; // Empêche l'image de s'étirer trop tout en remplissant le conteneur
 
           }
       }
   }  
 
- 
+ /* code scss pour les flèche du slider */
   .prev,
   .next {
     position: absolute;
     top: 50%;
+    color: white;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0);
     border: none;
     padding: 10px;
-    font-size: 18px;
+    font-size: 72px;
     cursor: pointer;
   }
   
