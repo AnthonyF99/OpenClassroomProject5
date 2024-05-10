@@ -58,6 +58,9 @@
         display: flex;
     }
     .tags {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
         ul {
             display: flex;
             padding: 0;
@@ -71,6 +74,7 @@
             }    
         }
     }
+
   }
 
   .collapse-logement {
@@ -83,6 +87,9 @@
   .collapse-logement .collapse-container {
     display: flex;
     width: 100%;
+    .collapse {
+      border-radius: 15px;
+    }
   }
 
   .collapse-logement .collapse-container .menu-content.open {

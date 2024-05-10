@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Navigate, useParams } from "react-router-dom";
 import Collapse from "../Collapse/collapse.jsx";
 import LogementsData from "../../datas/logement.json";
+import Star from "../Star/star.jsx";
 import "../../styles/logementsdetails.scss";
 
 function LogementsDetails() {
@@ -29,6 +30,11 @@ function LogementsDetails() {
     );
   };
 
+  const getRatingValue = () => {
+    const ratingString = thisLogement.rating; // Assuming "rating" is a string
+    return parseFloat(ratingString); // Convert string to number
+  };
+
   return (
     <div className="logements-details-informations">
       <div className="slider">
@@ -39,7 +45,7 @@ function LogementsDetails() {
               className={`slide ${index === currentSlide ? "active" : ""}`}
             >
               {index === currentSlide && (
-                <img src={picture} alt={`Image ${index}`} />
+                <img src={picture} alt={`${thisLogement.title}`} />
               )}
             </div>
           ))}
@@ -65,6 +71,9 @@ function LogementsDetails() {
               <li key={index}>{tag}</li>
             ))}
           </ul>
+          <div className="rating">
+            <Star rating={getRatingValue()} />
+          </div>
         </div>
       </div>
       <div className="collapse-logement">

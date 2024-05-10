@@ -1,0 +1,15 @@
+.Star {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .star {
+    width: 36px;
+    height: 36px;
+    margin-right: 0.25em;
+    overflow: visible;
+  }
+  
+  .star path {
+    fill: currentColor;
+  }
