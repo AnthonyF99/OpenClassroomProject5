@@ -103,6 +103,7 @@
 
   .collapse-logement .collapse-container {
     display: flex;
+    align-items: flex-start;
     width: 100%;
     .collapse {
       border-radius: 15px;
@@ -111,6 +112,13 @@
 
   .collapse-logement .collapse-container .menu-content.open {
     max-width: 100%;
+    padding: 30px;
+    margin: 0;
+    ul {
+      list-style: none;
+      padding: 30px;
+      margin: 0;
+    }
   }
   
   @media screen and (max-width: 576px) {
