@@ -11,11 +11,24 @@
 .menu-content {
     width: 80%;
     display: none;
-    background-color: #fff;
+    overflow: hidden;
 }
 
 .menu-content.open {
     display: block;
+    animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+}
+@keyframes slide-bottom {
+	0% {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 .collapse {
