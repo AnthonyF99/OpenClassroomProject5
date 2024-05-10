@@ -6,10 +6,12 @@ import homeImage from "../../assets/Banner.png";
 
 function Home() {
   return (
-    <div className="App">
-      <Banner imageUrl={homeImage} isHomePage={true} />
-      <Cards />
-    </div>
+    <main>
+      <div className="App">
+        <Banner imageUrl={homeImage} isHomePage={true} />
+        <Cards />
+      </div>
+    </main>
   );
 }
 

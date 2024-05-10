@@ -28,7 +28,11 @@ header {
 }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 576px) {
+  header .Kasa-logo {
+    width: 145px;
+    height: 46.88px;
+  }
   .navlink a {
     font-size: 12px;
   }

@@ -12,27 +12,29 @@ function Logements() {
   };
 
   return (
-    <div className="card-container">
-      {LogementsData.map((logement) => (
-        <Link
-          key={logement.id}
-          to={`/logement/${logement.id}`} // Utilisez to pour spécifier l'URL de destination
-          onClick={() => handleCardClick(logement.id)}
-          className="card-link" // Ajoutez une classe pour le style
-        >
-          <div className="card">
-            <div className="card-content">
-              <div className="card-img">
-                <img src={logement.cover} alt={logement.title}></img>
-              </div>
-              <div className="card-title">
-                <h4>{logement.title}</h4>
+    <section id="logement-cards">
+      <div className="card-container">
+        {LogementsData.map((logement) => (
+          <Link
+            key={logement.id}
+            to={`/logement/${logement.id}`} // Utilisez to pour spécifier l'URL de destination
+            onClick={() => handleCardClick(logement.id)}
+            className="card-link" // Ajoutez une classe pour le style
+          >
+            <div className="card">
+              <div className="card-content">
+                <div className="card-img">
+                  <img src={logement.cover} alt={logement.title}></img>
+                </div>
+                <div className="card-title">
+                  <h4>{logement.title}</h4>
+                </div>
               </div>
             </div>
-          </div>
-        </Link>
-      ))}
-    </div>
+          </Link>
+        ))}
+      </div>
+    </section>
   );
 }
 

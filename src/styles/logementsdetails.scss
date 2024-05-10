@@ -16,6 +16,9 @@
         }
         .slide img {
             width: 100%;
+            border-radius: 25px;
+            height: 415px;
+
           }
       }
   }  
@@ -96,5 +99,18 @@
     max-width: 100%;
   }
   
+  @media screen and (max-width: 576px) {
+    .slider {
+      .slides-container {
+          .slide img {
+              width: 100%;
+              height: 255px;
   
+            }
+        }
+    }  
+    .collapse-logement {
+      flex-direction: column; /* Afficher les collapses en ligne */
+    }
+  }
   

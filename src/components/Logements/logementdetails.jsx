@@ -36,58 +36,60 @@ function LogementsDetails() {
   };
 
   return (
-    <div className="logements-details-informations">
-      <div className="slider">
-        <div className="slides-container">
-          {thisLogement.pictures.map((picture, index) => (
-            <div
-              key={index}
-              className={`slide ${index === currentSlide ? "active" : ""}`}
-            >
-              {index === currentSlide && (
-                <img src={picture} alt={`${thisLogement.title}`} />
-              )}
-            </div>
-          ))}
-        </div>
-        <button className="prev" onClick={prevSlide}>
-          &#10094;
-        </button>
-        <button className="next" onClick={nextSlide}>
-          &#10095;
-        </button>
-      </div>
-      <div className="information">
-        <div className="host-logement">
-          <h1>{thisLogement.title}</h1>
-          <h2>{thisLogement.host.name}</h2>
-        </div>
-        <div id="location">
-          <p>{thisLogement.location}</p>
-        </div>
-        <div className="tags">
-          <ul>
-            {thisLogement.tags.map((tag, index) => (
-              <li key={index}>{tag}</li>
+    <section id="logement-page">
+      <div className="logements-details-informations">
+        <div className="slider">
+          <div className="slides-container">
+            {thisLogement.pictures.map((picture, index) => (
+              <div
+                key={index}
+                className={`slide ${index === currentSlide ? "active" : ""}`}
+              >
+                {index === currentSlide && (
+                  <img src={picture} alt={`${thisLogement.title}`} />
+                )}
+              </div>
             ))}
-          </ul>
-          <div className="rating">
-            <Star rating={getRatingValue()} />
+          </div>
+          <button className="prev" onClick={prevSlide}>
+            &#10094;
+          </button>
+          <button className="next" onClick={nextSlide}>
+            &#10095;
+          </button>
+        </div>
+        <div className="information">
+          <div className="host-logement">
+            <h1>{thisLogement.title}</h1>
+            <h2>{thisLogement.host.name}</h2>
+          </div>
+          <div id="location">
+            <p>{thisLogement.location}</p>
+          </div>
+          <div className="tags">
+            <ul>
+              {thisLogement.tags.map((tag, index) => (
+                <li key={index}>{tag}</li>
+              ))}
+            </ul>
+            <div className="rating">
+              <Star rating={getRatingValue()} />
+            </div>
           </div>
         </div>
+        <div className="collapse-logement">
+          <Collapse title="Description" content={thisLogement.description} />
+          <Collapse
+            title="Equipements"
+            content=<ul>
+              {thisLogement.equipments.map((equipment, index) => (
+                <li key={index}>{equipment}</li>
+              ))}
+            </ul>
+          />
+        </div>
       </div>
-      <div className="collapse-logement">
-        <Collapse title="Description" content={thisLogement.description} />
-        <Collapse
-          title="Equipements"
-          content=<ul>
-            {thisLogement.equipments.map((equipment, index) => (
-              <li key={index}>{equipment}</li>
-            ))}
-          </ul>
-        />
-      </div>
-    </div>
+    </section>
   );
 }
 
