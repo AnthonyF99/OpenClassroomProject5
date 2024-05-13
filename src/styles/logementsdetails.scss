@@ -9,7 +9,7 @@
     .slides-container {
         display: flex;
         width: 100%;
-        transition: transform 0.5s ease; /* Animation de transition pour le défilement */
+  
         .slider-pagination {
           left: 50%;
           top: 90%;
@@ -21,6 +21,17 @@
         }
         .slide.active {
             width: 100%;
+            animation: slide-in-right 0.5s cubic-bezier(0.075, 0.820, 0.165, 1.000) both;
+            @keyframes slide-in-right {
+              0% {
+                transform: translateX(1000px);
+                opacity: 0;
+              }
+              100% {
+                transform: translateX(0);
+                opacity: 1;
+              }
+            }
         }
         .slide img {
             width: 100%;
@@ -44,6 +55,7 @@
     padding: 10px;
     font-size: 72px;
     cursor: pointer;
+    
   }
   
   .prev {
