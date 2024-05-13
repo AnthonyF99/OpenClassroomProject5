@@ -89,7 +89,8 @@ function LogementsDetails() {
             </ul>
             <div className="rating">
               <Star rating={getRatingValue()} />
-              <span class="host-name-mobile">{thisLogement.host.name}</span>
+              <span className="host-name-mobile">{thisLogement.host.name}</span>
+              <span className="host-icon-mobile"></span>
             </div>
           </div>
         </div>

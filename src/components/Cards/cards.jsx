@@ -4,12 +4,7 @@ import LogementsData from "../../datas/logement.json";
 import "../../styles/card.scss";
 
 function Logements() {
-  const handleCardClick = (id) => {
-    // Ici, vous pouvez utiliser l'ID pour construire le lien et ouvrir la page appropriée
-    console.log("Carte cliquée avec l'ID :", id);
-    // Exemple de redirection vers une page spécifique en utilisant l'ID
-    // window.location.href = `/logement/${id}`;
-  };
+  const handleCardClick = (id) => {};
 
   return (
     <section id="logement-cards">
