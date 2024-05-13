@@ -35,6 +35,8 @@ function LogementsDetails() {
     return parseFloat(ratingString); // Convert string to number
   };
 
+  const shouldShowControls = thisLogement.pictures.length > 1;
+
   return (
     <section id="logement-page">
       <div className="logements-details-informations">
@@ -46,18 +48,30 @@ function LogementsDetails() {
                 className={`slide ${index === currentSlide ? "active" : ""}`}
               >
                 {index === currentSlide && (
-                  <img src={picture} alt={`${thisLogement.title}`} />
+                  <>
+                    <img src={picture} alt={`${thisLogement.title}`} />
+                    {shouldShowControls && (
+                      <div className="slider-pagination">{`${
+                        currentSlide + 1
+                      }/${thisLogement.pictures.length}`}</div>
+                    )}
+                  </>
                 )}
               </div>
             ))}
           </div>
-          <button className="prev" onClick={prevSlide}>
-            &#10094;
-          </button>
-          <button className="next" onClick={nextSlide}>
-            &#10095;
-          </button>
+          {shouldShowControls && (
+            <>
+              <button className="prev" onClick={prevSlide}>
+                &#10094;
+              </button>
+              <button className="next" onClick={nextSlide}>
+                &#10095;
+              </button>
+            </>
+          )}
         </div>
+
         <div className="information">
           <div className="host-logement">
             <h1>{thisLogement.title}</h1>
