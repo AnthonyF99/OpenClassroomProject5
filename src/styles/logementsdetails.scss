@@ -6,6 +6,7 @@
     width: 100%;
     overflow: hidden;
     border-radius: 25px;
+    margin-bottom: 30px;
     .slides-container {
         display: flex;
         width: 100%;
@@ -82,9 +83,11 @@
     }
     .host-logement h1 {
       flex: 1; /* Permet au titre de prendre autant d'espace que possible */
+      font-weight: 500;
     }
     .host-logement h2 {
       padding-right: 30px;
+      font-weight: 500;
     }
     .host-icon {
       width: 64px;
@@ -94,29 +97,34 @@
     }
     #location {
         display: flex;
-        font-weight: 500;
+        font-weight: 600;
         font-size: 18px;
 
     }
     .tags {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: baseline;
         ul {
             display: flex;
+            flex-wrap: wrap;
             padding: 0;
             color: white;
             list-style-type: none;
             gap: 20px;
             li {
                 background-color: #FF6060;
-                border-radius: 10px;
-                padding: 10px;
+                border-radius: 15px;
+                padding: 10px 30px;
+                font-weight: 700;
+                white-space: nowrap;
             }    
         }
     }
     .host-name-mobile {
       display: none;
+      font-weight: 500;
     }
 
   }
@@ -127,7 +135,6 @@
     justify-content: space-between;
     align-items: baseline;
     gap: 70px;
-
   }
 
   .collapse-logement .collapse-container {
@@ -137,6 +144,9 @@
     .collapse {
       border-radius: 15px;
       width: 94%;
+      .title {
+        font-weight: 700;
+      }
     }
   }
 
@@ -154,16 +164,26 @@
   @media screen and (max-width: 576px) {
     .slider {
       .slides-container {
+        .slider-pagination{
+          display: none;
+        }
           .slide img {
               width: 100%;
-              height: 255px;
+              height: 350px;
   
             }
         }
     }  
+    .prev,
+    .next {
+      font-size: 24px;
+    }
     .collapse-logement {
       flex-direction: column; /* Afficher les collapses en ligne */
       gap: 0px;
+      .collapse-container .collapse {
+        width: 90%;
+      }
 
     }
     .information {
@@ -184,14 +204,24 @@
         .rating {
           display: flex;
           align-items: center;
-          justify-content: space-between;
-          gap: 35px;
+          width: 100%;
+        
+          .star-container {
+            flex: 1;
+          }
+        
+          .host-info-mobile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+        
           .host-name-mobile {
-            margin-left: 50px;
+            display: inline-flex;
             color: #FF6060;
             font-weight: 500;
-            display: flex;
           }
+        
           .host-icon-mobile {
             width: 64px;
             height: 64px;
@@ -199,6 +229,7 @@
             background-color: #C4C4C4;
           }
         }
+        
     }
   }
 }

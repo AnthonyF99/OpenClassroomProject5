@@ -88,16 +88,22 @@ function LogementsDetails() {
               ))}
             </ul>
             <div className="rating">
-              <Star rating={getRatingValue()} />
-              <span className="host-name-mobile">{thisLogement.host.name}</span>
-              <span className="host-icon-mobile"></span>
+              <div className="star-container">
+                <Star rating={getRatingValue()} />
+              </div>
+              <div className="host-info-mobile">
+                <span className="host-name-mobile">
+                  {thisLogement.host.name}
+                </span>
+                <span className="host-icon-mobile"></span>
+              </div>
             </div>
           </div>
         </div>
         <div className="collapse-logement">
           <Collapse title="Description" content={thisLogement.description} />
           <Collapse
-            title="Equipements"
+            title="Équipements"
             content=<ul>
               {thisLogement.equipments.map((equipment, index) => (
                 <li key={index}>{equipment}</li>
