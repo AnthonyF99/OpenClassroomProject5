@@ -1,0 +1,64 @@
+.collapse-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.menu-content {
+    width: 80%;
+    display: none;
+    overflow: hidden;
+}
+
+.menu-content.open {
+    display: block;
+    animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+}
+@keyframes slide-bottom {
+	0% {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.collapse {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FF6060;
+    border-radius: 5px;
+    align-items: center;
+    width: 80%;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+}
+
+.collapse:focus {
+    outline: none;
+}
+
+.collapse-container {
+    .collapse {
+      .arrow {
+        transition: transform 0.25s ease; // Ajout de la transition de l'animation
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+    }
+  
+    .arrow.open {
+      transform: rotate(-180deg); // Rotation de 90 degrés lorsque le collapse est ouvert
+    }
+  }
+  

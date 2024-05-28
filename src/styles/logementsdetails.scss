@@ -1,0 +1,236 @@
+.slider {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    .slides-container {
+        display: flex;
+        width: 100%;
+  
+        .slider-pagination {
+          left: 50%;
+          top: 90%;
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+        }
+        .slide.active {
+            width: 100%;
+            animation: slide-in-right 0.5s cubic-bezier(0.075, 0.820, 0.165, 1.000) both;
+            @keyframes slide-in-right {
+              0% {
+                transform: translateX(1000px);
+                opacity: 0;
+              }
+              100% {
+                transform: translateX(0);
+                opacity: 1;
+              }
+            }
+        }
+        .slide img {
+            width: 100%;
+            border-radius: 25px;
+            height: 415px;
+            object-fit: cover; // Empêche l'image de s'étirer trop tout en remplissant le conteneur
+
+          }
+      }
+  }  
+
+ /* code scss pour les flèche du slider */
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    color: white;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    padding: 10px;
+    font-size: 72px;
+    cursor: pointer;
+    
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+
+
+  /* scss pour les informations sur les logemnts */
+
+  .information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .host-logement {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: #FF6060;
+    }
+    .host-logement h1 {
+      flex: 1; /* Permet au titre de prendre autant d'espace que possible */
+      font-weight: 500;
+    }
+    .host-logement h2 {
+      padding-right: 30px;
+      font-weight: 500;
+    }
+    .host-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background-color: #C4C4C4;
+    }
+    #location {
+        display: flex;
+        font-weight: 600;
+        font-size: 18px;
+
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+            color: white;
+            list-style-type: none;
+            gap: 20px;
+            li {
+                background-color: #FF6060;
+                border-radius: 15px;
+                padding: 10px 30px;
+                font-weight: 700;
+                white-space: nowrap;
+            }    
+        }
+    }
+    .host-name-mobile {
+      display: none;
+      font-weight: 500;
+    }
+
+  }
+
+  .collapse-logement {
+    display: flex;
+    flex-direction: row; /* Afficher les collapses en ligne */
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 70px;
+  }
+
+  .collapse-logement .collapse-container {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    .collapse {
+      border-radius: 15px;
+      width: 94%;
+      .title {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .collapse-logement .collapse-container .menu-content.open {
+    max-width: 100%;
+    padding: 30px;
+    margin: 0;
+    ul {
+      list-style: none;
+      padding: 0px;
+      margin: 0;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .slider {
+      .slides-container {
+        .slider-pagination{
+          display: none;
+        }
+          .slide img {
+              width: 100%;
+              height: 350px;
+  
+            }
+        }
+    }  
+    .prev,
+    .next {
+      font-size: 24px;
+    }
+    .collapse-logement {
+      flex-direction: column; /* Afficher les collapses en ligne */
+      gap: 0px;
+      .collapse-container .collapse {
+        width: 90%;
+      }
+
+    }
+    .information {
+   
+      .host-logement {
+          flex-direction: column;  
+          align-items: flex-start; /* Aligner les éléments sur la gauche */
+          h2 {
+            display: none;
+          }
+          .host-icon {
+            display: none;
+          }
+    
+      }
+       .tags {
+        flex-direction: column;
+        .rating {
+          display: flex;
+          align-items: center;
+          width: 100%;
+        
+          .star-container {
+            flex: 1;
+          }
+        
+          .host-info-mobile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+        
+          .host-name-mobile {
+            display: inline-flex;
+            color: #FF6060;
+            font-weight: 500;
+          }
+        
+          .host-icon-mobile {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background-color: #C4C4C4;
+          }
+        }
+        
+    }
+  }
+}
+  

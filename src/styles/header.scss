@@ -1,0 +1,49 @@
+header {
+  width: 100%;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+  margin-top: 45px;
+  margin-bottom: 50px;
+
+  .Kasa-logo {
+    width: 210px;
+    height: 68px; 
+  }
+
+  .navlink {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 57px;
+    align-items: center; 
+
+    a {
+      text-decoration: none;
+      color: black; 
+      text-wrap: nowrap;
+      font-size: 24px;
+    }
+    .active {
+      text-decoration: underline;
+  }
+}
+}
+
+@media screen and (max-width: 576px) {
+  header {
+    .Kasa-logo {
+      width: 145px;
+      height: auto;
+  } 
+  .navlink {
+    gap: 57px;
+    margin-left: 20px;
+    a {
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+  }
+  }
+
+}
+

@@ -1,0 +1,58 @@
+.card-container {
+    background: #F6F6F6;
+    padding: 50px;
+    border-radius: 25px;
+    margin-top: 43px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; // Pour répartir uniformément les cartes sur la ligne
+  }
+  
+  .card {
+    border-radius: 10px;
+    background-color: #FF6060;
+    margin-bottom: 20px; // Espacement entre les cartes
+    color: white;
+  }
+  
+  .card-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-img img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 340px;
+    object-fit: cover;
+  }
+
+  .card-title {
+    padding: 10px;
+    max-height: 60px;
+  }
+  
+  a {
+    width: 30%;
+    height: 80%;
+    display: block;
+    text-decoration: none;
+  }
+
+  @media  screen and (max-width:650px){
+  .card-container {
+    padding: 30px 0px;
+    margin-top: 0px;
+    flex-direction: column;
+    background-color: transparent;
+    margin-bottom: 27px;
+    a {
+      width: 100%;
+    }
+  }
+    
+  }
+  

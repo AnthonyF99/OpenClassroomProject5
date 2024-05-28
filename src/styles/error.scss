@@ -1,0 +1,40 @@
+.error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FF6060;
+    width: 100%;
+    margin-bottom: 139px;
+    font-family: Montserrat;
+    .error-title {
+        display: flex;
+        font-size: 10em;
+    }
+    p {
+        font-size: 2em;
+        margin-bottom: 139px;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1em;
+        color: black;
+        text-decoration: underline;
+        margin-bottom: 113px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .error-title {
+        font-size: 12em;
+    }
+    .error-container {
+        a {
+            text-wrap: nowrap;
+        }
+    }
+}
+
