@@ -76,7 +76,12 @@ function LogementsDetails() {
           <div className="host-logement">
             <h1>{thisLogement.title}</h1>
             <h2>{thisLogement.host.name}</h2>
-            <div className="host-icon"></div>
+            <div className="host-icon">
+              <img
+                src={thisLogement.host.picture}
+                alt={thisLogement.host.name}
+              />
+            </div>
           </div>
           <div id="location">
             <p>{thisLogement.location}</p>
@@ -95,13 +100,21 @@ function LogementsDetails() {
                 <span className="host-name-mobile">
                   {thisLogement.host.name}
                 </span>
-                <span className="host-icon-mobile"></span>
+                <span className="host-icon-mobile">
+                  <img
+                    src={thisLogement.host.picture}
+                    alt={thisLogement.host.name}
+                  />
+                </span>
               </div>
             </div>
           </div>
         </div>
         <div className="collapse-logement">
-          <Collapse title="Description" content={thisLogement.description} />
+          <Collapse
+            title="Description"
+            content=<p>{thisLogement.description}</p>
+          />
           <Collapse
             title="Équipements"
             content=<ul>

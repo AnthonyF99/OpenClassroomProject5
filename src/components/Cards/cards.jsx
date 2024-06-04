@@ -4,7 +4,7 @@ import LogementsData from "../../datas/logement.json";
 import "../../styles/card.scss";
 
 function Logements() {
-  const handleCardClick = (id) => {};
+  //const handleCardClick = (id) => {};
 
   return (
     <section id="logement-cards">
@@ -13,7 +13,7 @@ function Logements() {
           <Link
             key={logement.id}
             to={`/logement/${logement.id}`} // Utilisez to pour spécifier l'URL de destination
-            onClick={() => handleCardClick(logement.id)}
+            //onClick={() => handleCardClick(logement.id)}
             className="card-link" // Ajoutez une classe pour le style
           >
             <div className="card">

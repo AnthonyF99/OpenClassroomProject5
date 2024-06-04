@@ -89,11 +89,13 @@
       padding-right: 30px;
       font-weight: 500;
     }
-    .host-icon {
+    .host-icon img {
       width: 64px;
       height: 64px;
       border-radius: 50%;
-      background-color: #C4C4C4;
+    }
+    .host-icon-mobile {
+      display: none;
     }
     #location {
         display: flex;
@@ -152,11 +154,27 @@
 
   .collapse-logement .collapse-container .menu-content.open {
     max-width: 100%;
-    padding: 30px;
     margin: 0;
+    p {
+      padding: 30px;
+    }
     ul {
       list-style: none;
-      padding: 0px;
+      padding: 30px;
+      margin: 0;
+    }
+  }
+
+  
+  .collapse-logement .collapse-container .menu-content.not-open {
+    max-width: 100%;
+    margin: 0;
+    p {
+      padding: 30px;
+    }
+    ul {
+      list-style: none;
+      padding: 30px;
       margin: 0;
     }
   }
@@ -176,7 +194,7 @@
     }  
     .prev,
     .next {
-      font-size: 24px;
+      font-size: 36px;
     }
     .collapse-logement {
       flex-direction: column; /* Afficher les collapses en ligne */
@@ -223,11 +241,13 @@
           }
         
           .host-icon-mobile {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            background-color: #C4C4C4;
-          }
+            display: block;
+            img {
+              width: 64px;
+              height: 64px;
+              border-radius: 50%;
+
+            }          }
         }
         
     }
