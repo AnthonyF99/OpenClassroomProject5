@@ -101,7 +101,10 @@ function LogementsDetails() {
           </div>
         </div>
         <div className="collapse-logement">
-          <Collapse title="Description" content={thisLogement.description} />
+          <Collapse
+            title="Description"
+            content=<p>{thisLogement.description}</p>
+          />
           <Collapse
             title="Équipements"
             content=<ul>

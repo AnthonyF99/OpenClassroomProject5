@@ -152,11 +152,27 @@
 
   .collapse-logement .collapse-container .menu-content.open {
     max-width: 100%;
-    padding: 30px;
     margin: 0;
+    p {
+      padding: 30px;
+    }
     ul {
       list-style: none;
-      padding: 0px;
+      padding: 30px;
+      margin: 0;
+    }
+  }
+
+  
+  .collapse-logement .collapse-container .menu-content.not-open {
+    max-width: 100%;
+    margin: 0;
+    p {
+      padding: 30px;
+    }
+    ul {
+      list-style: none;
+      padding: 30px;
       margin: 0;
     }
   }
