@@ -89,11 +89,13 @@
       padding-right: 30px;
       font-weight: 500;
     }
-    .host-icon {
+    .host-icon img {
       width: 64px;
       height: 64px;
       border-radius: 50%;
-      background-color: #C4C4C4;
+    }
+    .host-icon-mobile {
+      display: none;
     }
     #location {
         display: flex;
@@ -239,11 +241,13 @@
           }
         
           .host-icon-mobile {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            background-color: #C4C4C4;
-          }
+            display: block;
+            img {
+              width: 64px;
+              height: 64px;
+              border-radius: 50%;
+
+            }          }
         }
         
     }
