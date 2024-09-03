@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/OpenClassroomProject5/static/css/main.b98fcff3.css",
+    "main.js": "/OpenClassroomProject5/static/js/main.a7227863.js",
+    "static/media/Bannerabout.png": "/OpenClassroomProject5/static/media/Bannerabout.640955dab8c7bff25514.png",
+    "static/media/Banner.png": "/OpenClassroomProject5/static/media/Banner.19221376a0aa2549c135.png",
+    "static/media/star.svg": "/OpenClassroomProject5/static/media/star.4c482d6ec728204aac539bd66e66d766.svg",
+    "index.html": "/OpenClassroomProject5/index.html",
+    "static/media/arrow.svg": "/OpenClassroomProject5/static/media/arrow.6650b597f684f56def469a3daafaa448.svg",
+    "main.b98fcff3.css.map": "/OpenClassroomProject5/static/css/main.b98fcff3.css.map",
+    "main.a7227863.js.map": "/OpenClassroomProject5/static/js/main.a7227863.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b98fcff3.css",
+    "static/js/main.a7227863.js"
+  ]
+}
