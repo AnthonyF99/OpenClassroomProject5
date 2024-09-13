@@ -17,7 +17,7 @@ Ce projet a été réalisé dans le cadre de mon apprentissage de React.
 ## Comment exécuter le projet
 1. Clonez le dépôt :  
    ```bash
-   git clone https://github.com/username/real-estate-react.git
+   git clone https://github.com/AnthonyF99/OpenClassroomProject5.git
 2. Installez les dépandances :
    ```bash
    yarn install.
