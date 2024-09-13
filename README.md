@@ -18,11 +18,9 @@ Ce projet a été réalisé dans le cadre de mon apprentissage de React.
 1. Clonez le dépôt :  
    ```bash
    git clone https://github.com/username/real-estate-react.git
-  
+  ```bash
 2. Installez les dépandances :
-```bash
 yarn install.
 
 3. Lancer le serveur de développement
-```bash
 yarn start
